@@ -7,9 +7,13 @@ require("dotenv/config");
 
 var app = express();
 
+const account = require("./routes/account");
+
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
+
+app.use("/api/account", account);
 
 mongoose.connect(
     process.env.DB_Connection,
