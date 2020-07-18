@@ -1,6 +1,6 @@
 const { body } = require("express-validator");
 
-exports.validateCreateUserFields = [
+exports.validateLoginUserFields = [
     body("email")
         .not()
         .isEmpty()
